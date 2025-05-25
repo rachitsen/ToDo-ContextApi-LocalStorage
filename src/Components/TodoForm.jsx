@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { useTodo } from '../Contexts/ToDoContext';
 
 function TodoForm() {
-    const [todo,setTodo] = useState("");
-    const {addTodo} = useTodo();
+    const [todo,setTodo] = useState(""); // create a local state to save todo string
+    const {addTodo} = useTodo();  // accessing addTodo from context
 
+    // a function called when sumit button is press
+    // exit if todo is empty else pass todo object 
     const add = (e)=>{
         e.preventDefault();
 
